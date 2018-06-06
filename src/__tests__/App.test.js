@@ -1,9 +1,9 @@
+import React from 'react'
 import ReactDOM from 'react-dom'
+import App from '../App'
 
-jest.mock('react-dom')
-
-require('../App')
-
-test('Renders the application', () => {
-  expect(ReactDOM.render).toBeCalled()
+it('renders without crashing', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<App />, div) //eslint-disable-line
+  ReactDOM.unmountComponentAtNode(div)
 })

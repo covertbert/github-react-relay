@@ -27,19 +27,19 @@ function registerValidSW(swUrl) {
               // the fresh content will have been added to the cache.
               // It's the perfect time to display a "New content is
               // available; please refresh." message in your web app.
-              console.log('New content is available; please refresh.')
+              console.log('New content is available; please refresh.') //eslint-disable-line
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
-              console.log('Content is cached for offline use.')
+              console.log('Content is cached for offline use.') //eslint-disable-line
             }
           }
         }
       }
     })
     .catch((error) => {
-      console.error('Error during service worker registration:', error)
+      console.error('Error during service worker registration:', error) //eslint-disable-line
     })
 }
 
@@ -64,7 +64,7 @@ function checkValidServiceWorker(swUrl) {
       }
     })
     .catch(() => {
-      console.log('No internet connection found. App is running in offline mode.')
+      console.log('No internet connection found. App is running in offline mode.') //eslint-disable-line
     })
 }
 
@@ -89,7 +89,7 @@ export default function register() {
         // Add some additional logging to localhost, pointing developers to the
         // service worker/PWA documentation.
         navigator.serviceWorker.ready.then(() => {
-          console.log('This web app is being served cache-first by a service ' +
+          console.log('This web app is being served cache-first by a service ' + //eslint-disable-line
               'worker. To learn more, visit https://goo.gl/SC7cgQ')
         })
       } else {
