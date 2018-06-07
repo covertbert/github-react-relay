@@ -1,9 +1,10 @@
-import { compose, setDisplayName } from 'recompose'
 import { graphql } from 'react-relay'
+import { compose, setDisplayName } from 'recompose'
+
+import environment from '../../environment'
+import { createQueryRenderer } from '../../relay'
 
 import MainView from './MainView'
-import { createQueryRenderer } from '../../relay'
-import environment from '../../environment'
 
 const withQueryRenderer = createQueryRenderer(
   environment,
@@ -15,8 +16,6 @@ const withQueryRenderer = createQueryRenderer(
     }
   `,
 )
-
-alert(withQueryRenderer)
 
 export default compose(
   setDisplayName('MainViewContainer'),
