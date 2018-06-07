@@ -12,6 +12,7 @@ const withQueryRenderer = createQueryRenderer(
    query MainViewContainer_Query {
       viewer {
         login
+        name
       }
     }
   `,

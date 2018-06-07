@@ -3,15 +3,17 @@ import PropTypes from 'prop-types'
 
 const MainView = ({ viewer }) => (
   <div>
-    <h1>{ viewer }</h1>
+    <h1>{ viewer.login }</h1>
+    <h1>{ viewer.name }</h1>
     <h2>Test</h2>
   </div>
 )
 
 MainView.propTypes = {
-  viewer: PropTypes.arrayOf(PropTypes.shape({
+  viewer: PropTypes.shape({
+    login: PropTypes.string,
     name: PropTypes.string,
-  })).isRequired,
+  }).isRequired,
 }
 
 export default MainView
