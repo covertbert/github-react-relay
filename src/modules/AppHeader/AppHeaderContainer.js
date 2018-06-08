@@ -11,8 +11,9 @@ const withQueryRenderer = createQueryRenderer(
   graphql`
    query AppHeaderContainer_Query {
       viewer {
-        login
+        avatarUrl
         name
+        login
       }
     }
   `,
